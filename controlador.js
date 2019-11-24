@@ -26,13 +26,30 @@ function getDatos()
         calcular2(PS1.getValor() ,PS2.getValor() ,PS3.getValor() ,P12,P22,P32);
         calcular3(PS1.getValor() ,PS2.getValor() ,PS3.getValor() ,P13,P23,P33);
         
-        console.log(resultado1)
-        console.log(resultado2)
-        console.log(resultado3)
+        var div1 = document.createElement("div")
+        var div2 = document.createElement("div")
+        var div3 = document.createElement("div")
+        var vuelta = document.createElement("div")
+        vuelta.className += "bg-secondary col-md-12 text-white";
+        div1.className += " col-md-12";
+        div2.className += " col-md-12";
+        div3.className += " col-md-12";
+        
+        vuelta.innerHTML=`<p>VUELTA ${i}</p>`
+        div1.innerHTML=`<p>PS1 = ${resultado1}</p>`
+        div2.innerHTML=`<p>PS2 = ${resultado2}</p>`
+        div3.innerHTML=`<p>PS3 = ${resultado3}</p>`
+
+        resultados = document.getElementById('resultados').appendChild(vuelta)
+        resultados = document.getElementById('resultados').appendChild(div1)
+        resultados = document.getElementById('resultados').appendChild(div2)
+        resultados = document.getElementById('resultados').appendChild(div3)
+
+
+
         PS1.setValor(resultado1)
         PS2.setValor(resultado2)
         PS3.setValor(resultado3)
-        console.log("__________________________________")
         i++
     }while(i<=iteraciones)
 }
