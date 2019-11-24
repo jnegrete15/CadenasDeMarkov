@@ -30,15 +30,16 @@ function getDatos()
         var div2 = document.createElement("div")
         var div3 = document.createElement("div")
         var vuelta = document.createElement("div")
-        vuelta.className += "bg-secondary col-md-12 text-white";
-        div1.className += " col-md-12";
-        div2.className += " col-md-12";
-        div3.className += " col-md-12";
+    
+        vuelta.className = "bg-secondary col-md-12 text-white";
+        div1.className = "col-md-12 border-bottom";
+        div2.className = "col-md-12 border-bottom";
+        div3.className = "col-md-12 border-bottom";
         
-        vuelta.innerHTML=`<p>VUELTA ${i}</p>`
-        div1.innerHTML=`<p>PS1 = ${resultado1}</p>`
-        div2.innerHTML=`<p>PS2 = ${resultado2}</p>`
-        div3.innerHTML=`<p>PS3 = ${resultado3}</p>`
+        vuelta.innerHTML=`<p class="my-2">VUELTA ${i}</p>`
+        div1.innerHTML=`<p class="my-2">PS1 = ${resultado1}</p>`
+        div2.innerHTML=`<p class="my-2">PS2 = ${resultado2}</p>`
+        div3.innerHTML=`<p class="my-2">PS3 = ${resultado3}</p>`
 
         resultados = document.getElementById('resultados').appendChild(vuelta)
         resultados = document.getElementById('resultados').appendChild(div1)
